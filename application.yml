@@ -1,0 +1,18 @@
+server:
+  port: 9876
+
+test.security.jwt:
+  tokenExpirationTime: 15 # Number of minutes
+  refreshTokenExpTime: 60 # Minutes
+  tokenIssuer: http://cognetyx.com
+  tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
